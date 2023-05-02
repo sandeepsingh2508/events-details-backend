@@ -39,7 +39,7 @@ exports.createEvent = catchAsyncError(async (req, res, next) => {
   const {
     userId,
     name,
-    files: { url },
+    files,
     tagline,
     description,
     moderator,
@@ -51,9 +51,7 @@ exports.createEvent = catchAsyncError(async (req, res, next) => {
   const event = await Event.create({
     userId,
     name,
-    files: {
-      url,
-    },
+    files,
     tagline,
     description,
     moderator,

@@ -12,9 +12,7 @@ const EventSchema = new Schema({
     required: [true, "Name field is require"],
     minLength: [4, "Name should have more than 3 cahrecters"],
   },
-  files:[{
-    url: { type: String },
-  }],
+  files:[{type: String}],
   tagline: {
     type: String,
     required: [true, "Tagline field is require"],
